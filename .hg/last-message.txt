@@ -1,0 +1,2 @@
+moved the libraries to a libs folder (was getting a bit busy)
+started the variable playback speed position calc stuff

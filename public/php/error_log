@@ -1,0 +1,35 @@
+[03-Dec-2011 15:42:05] PHP Parse error:  syntax error, unexpected '}' in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 18
+[03-Dec-2011 15:53:47] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 13
+[03-Dec-2011 15:54:15] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 13
+[03-Dec-2011 16:57:45] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:02:04] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:02:54] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:22:20] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:25:33] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:27:39] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:29:29] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:35:44] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:39:07] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:42:44] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:48:12] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 10
+[03-Dec-2011 17:49:00] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 10
+[03-Dec-2011 17:49:59] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 10
+[03-Dec-2011 17:50:29] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 12
+[03-Dec-2011 17:51:46] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 13
+[03-Dec-2011 17:52:14] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 13
+[03-Dec-2011 17:52:17] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 13
+[03-Dec-2011 17:53:01] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 12
+[03-Dec-2011 17:53:40] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 12
+[03-Dec-2011 17:56:20] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:56:26] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:56:32] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 17:56:35] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 17:59:14] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 18:00:28] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 18:01:18] PHP Parse error:  syntax error, unexpected $end in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 13
+[03-Dec-2011 18:01:20] PHP Parse error:  syntax error, unexpected $end in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 13
+[03-Dec-2011 18:01:30] PHP Parse error:  syntax error, unexpected $end in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 13
+[03-Dec-2011 18:01:42] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8
+[03-Dec-2011 18:03:41] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 11
+[03-Dec-2011 18:04:39] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/addbpm.php on line 12
+[03-Dec-2011 18:04:53] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/rclouth/public_html/soundcloudmixer/getbpm.php on line 8

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	<head>
+		<title>Soundcloud Mixer</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="./css/layout-default-latest.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css"/>
+		<link rel="stylesheet" href="./css/mixer.css" type="text/css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.layout-latest.js"></script>
+		<script type="text/javascript" src="js/jquery.xdomainajax.js"></script>
+		<script type="text/javascript" src="js/processing-1.2.3.min.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" charset="utf-8" src="./js/mixer.js"></script>
+		<script type='text/javascript' src="js/beatdetektor.js" ></script>
+		<script type='text/javascript' src="js/dsp.js" ></script>
+		<script type='text/javascript' src="js/soundcloudhandler.js" ></script>
+		<script type='text/javascript' src="js/deck.js" ></script>
+		<script type='text/javascript' src="js/waveform.js" ></script>
+		<script type="text/javascript" src="js/midibridge-0.5.min.js"></script>
+		<script type="text/javascript" >
+			$(document).ready(function() {
+				//setup panels
+				$('body').layout({
+					center__paneSelector : ".mainPanel",
+					south__paneSelector : ".tracksPanel",
+					south__size : 250
+				});
+
+				$('div.tracksPanel').layout({
+					north__paneSelector : ".searchPanel",
+					west__paneSelector : ".tagResultPanel",
+					center__paneSelector : ".artistResultPanel",
+					east__paneSelector : ".trackResultPanel",
+					north__size : 50,
+					west__size : 150,
+					center__size : 250,
+					east__size : 900
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class="mainPanel">
+			<div class="globalPanel orange">
+				SoundCloud Mixer
+			</div>
+			<div class="decksPanel">
+				<table id="decksPanel" class="deck" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>
+						<div class="fullWaveform1">
+							<div class="playhead1"></div>
+						</div></td>
+						<td class="deckLabel1 orange"> A </td>
+						<td class="deckInfo1"><div class="title1 trackInfo"></div><div class="artist1 trackInfo"></div><div class="playtime1 trackInfo"></div><div class="tempo1 trackInfo"></div></td>
+					</tr>
+					<tr>
+						<td id="waveform" rowspan="2"><div class="deckStatus1 trackInfo"></div>
+							<div class="deckStatus2 trackInfo"></div>
+						<canvas id="waveformCanvas" />
+						</canvas> </td>
+						<td class="tempoSliderDiv1"><div class="deckTempo1 deckControlSlider"></div></td>
+						<td class="deckControls1">
+						<button class="playButton1 deckControlButton">
+							play
+						</button>
+						<button class="pauseButton1 deckControlButton">
+							pause
+						</button>
+						<button class="cueButton1 deckControlButton">
+							cue
+						</button>
+						<button class="syncButton1 deckControlButton">
+							sync
+						</button><div class="deckVolume1 deckControlSlider"></div></td>
+					</tr>
+					<tr>
+						<td class="tempoSliderDiv2"><div class="deckTempo2 deckControlSlider"></div></td>
+						<td class="deckControls2">
+						<button class="playButton2 deckControlButton">
+							play
+						</button>
+						<button class="pauseButton2 deckControlButton">
+							pause
+						</button>
+						<button class="cueButton2 deckControlButton">
+							cue
+						</button>
+						<button class="syncButton2 deckControlButton">
+							sync
+						</button><div class="deckVolume2 deckControlSlider"></div></td>
+					</tr>
+					<tr>
+						<td>
+						<div class="fullWaveform2">
+							<div class="playhead2"></div>
+						</div></td>
+						<td class="deckLabel2 orange"> B </td>
+						<td class="deckInfo2"><div class="title2 trackInfo"></div><div class="artist2 trackInfo"></div><div class="playtime2 trackInfo"></div><div class="tempo2 trackInfo"></div></td>
+					</tr>
+				</table>
+			</div>
+	
+			<table class="mixerPanel" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+					<div class="deckFx1">
+						<div class="hp1Div fxDiv">
+							<h3 class="sliderLabel">HP</h3>
+							<div class="hpCutSlider1 fxSlider"></div>
+						</div>
+						<div class="lp1Div fxDiv">
+							<h3 class="sliderLabel">LP</h3>
+							<div class="lpCutSlider1 fxSlider"></div>
+						</div>
+		
+					</div></td>
+				
+					<td>
+					<div class="crossFaderDiv">
+						<h3 class="cfLabelA">A</h1>
+						<div class="crossFader"></div>
+						<h3 class="cfLabelB">B</h1>
+					</div></td>
+				
+					<td>
+					<div class="deckFx2">
+						<div class="hp2Div fxDiv">
+							<h3 class="sliderLabel">HP</h3>
+							<div class="hpCutSlider2 fxSlider"></div>
+						</div>
+						<div class="lp2Div fxDiv">
+							<h3 class="sliderLabel">LP</h3>
+							<div class="lpCutSlider2 fxSlider"></div>
+						</div>
+					</div>
+					</td>
+				</tr>
+		</table>
+		</div>
+		<div class="tracksPanel">
+			<div class="searchPanel">
+				<input type="text" size="10" name="searchText"/>
+				<input type="button" size="10" name="searchButton" value="search"/>
+			</div>
+			<div class="tagResultPanel" >
+				<div class="tagResults" ></div>
+			</div>
+			<div class="artistResultPanel" >
+				<div class="artistResults" ></div>
+			</div>
+			<div class="trackResultPanel" >
+				<div class="trackResults" ></div>
+			</div>
+		</div>
+	</body>
+</html>

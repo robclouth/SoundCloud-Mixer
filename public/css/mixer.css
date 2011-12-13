@@ -1,0 +1,267 @@
+body {
+	font-size: 12px;
+	color: #EEE;
+	background-color: #555;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+}
+.gradient {
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+table {
+	border-spacing: 0;
+}
+canvas {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+.globalPanel {
+	width: auto;
+	height: 30px;
+	border-bottom: 1px solid #000000;
+	font-size: 30px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+.searchResult {
+	margin: 2px;
+	cursor: pointer;
+	height:15px;
+	width:100%;
+}
+.searchResultDragging {
+	margin: 2px;
+	cursor: pointer;
+	height:15px;
+	width:100%;
+}
+.searchResult.hilite {
+	background: #DDD;
+	color: #222;
+}
+.searchResult.selected {
+	background: rgba(255,150,0,1);
+	color: #222;
+}
+.deck {
+	height: 200px;
+	width: 100%;
+	/*background: #DDD;*/
+	border-bottom: 1px solid #000000;
+	/*margin-bottom: 3px;*/
+	/*padding: 5px;*/
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+#deck2 {
+}
+.mixerPanel {
+	height: 200px;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+.deckInfo1, .deckInfo2 {
+	height: 50px;
+	border-left: 1px solid #000000;
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+.deckInfo1 {
+	height: 50px;
+	border-bottom: 1px solid #000000;
+}
+.deckInfo2 {
+	height: 50px;
+	border-top: 1px solid #000000;
+}
+#waveform {
+	height: 300px;
+	position:relative;
+}
+.fullWaveform1, .fullWaveform2 {
+	background: -webkit-gradient(linear, left top, left bottom, from(#777), to(#555));
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 50px;
+}
+.orange {
+	color: rgba(255,150,0,1);
+}
+.fullWaveform1 {
+	border-bottom: 1px solid #000000;
+}
+.fullWaveform2 {
+	border-top: 1px solid #000000;
+}
+.deckLabel1, .deckLabel2 {
+	font-size: 40px;
+	text-align: center;
+	border-left: 1px solid #000000;
+}
+.deckLabel1 {
+	border-bottom: 1px solid #000000;
+}
+.deckLabel2 {
+	border-top: 1px solid #000000;
+}
+.tempoSliderDiv1, .tempoSliderDiv2 {
+	width: 50px;
+	height: 150px;
+	border-left: 1px solid #000000;
+}
+.tempoSliderDiv1 {
+	border-bottom: 1px solid #000000;
+}
+.deckControls1, .deckControls2 {
+	height: 150px;
+	width: 200px;
+	border-left: 1px solid #000000;
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+.deckControls1 {
+	border-bottom: 1px solid #000000;
+}
+.deckControlSlider {
+	height: 105px;
+	margin: 10px auto;
+}
+.deckStatus1, .deckStatus2 {
+	position: absolute;
+}
+.deckStatus2{
+	top:160px;
+}
+
+.sliderLabel {
+	text-align: center;
+	color: rgba(255,150,0,1);
+}
+.deckFx1, .deckFx2 {
+	width: 120px;
+	height: 200px;
+	margin: 10px auto;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #000000;
+}
+
+.fxDiv {
+	width: 30px;
+	height: 200px;
+	float: left;
+}
+.fxSlider {
+	margin: 0 auto;
+}
+.crossFader {
+	width: 200px;
+	margin: 50px auto;
+}
+.crossFaderDiv {
+	position: relative;
+	width: 300px;
+	margin: 10px auto;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #000000;
+}
+.cfLabelA {
+	position: absolute;
+	top: -25px;
+	left: 10px;
+	color: rgba(255,150,0,1);
+	font-size: 50px;
+	text-align: center;
+}
+.cfLabelB {
+	position: absolute;
+	top: -25px;
+	left: 255px;
+	color: rgba(255,150,0,1);
+	font-size: 50px;
+	text-align: center;
+}
+.playhead1, .playhead2 {
+	width: 2px;
+	height: 50px;
+	position: relative;
+	background-color: rgba(255,150,0,0.5);
+}
+.trackInfo {
+	margin: 0 2px;
+}
+.trackResult.name {
+	float: left;
+	width: 60%;
+}
+.trackResult.bpm {
+	float: left;
+	width: 20%;
+}
+.trackResult.duration {
+	float: left;
+	width: 20%;
+}
+.bordered {
+	border-top: 1px solid #000000;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.ui-button-text {
+	padding: 2px;
+}
+/* customize the borders to avoid double-borders */
+.ui-layout-pane {
+	border: 0; /* override layout-default-latest.css */
+}
+.ui-layout-pane-north, .ui-layout-pane-south {
+
+	overflow: hidden;
+}
+.ui-layout-pane-west, .ui-layout-pane-east {
+}
+.ui-layout-pane-center {
+	border-left: 0;
+	border-right: 0;
+}
+.inner-center {
+}/* add shading to outer sidebar-panes */
+.outer-west, .outer-east {
+	background-color: #EEE;
+}
+.middle-west, .middle-east {
+	background-color: #F8F8F8;
+}/* remove padding & scrolling from panes that are 'containers' for nested layouts */
+.tracksPanel, .mainPanel {
+	border: 0; /* cosmetic */
+	padding: 0;
+	overflow: hidden;
+}/*	 *	customize borders on panes/resizers to make pretty	 */
+.ui-layout-pane-west {
+	border-right: 0;
+}
+.ui-layout-resizer-west {
+}
+.ui-layout-pane-east {
+	border-left: 0;
+}
+.ui-layout-resizer-east {
+}
+.ui-layout-pane-north {
+	border-bottom: 0;
+}
+.ui-layout-resizer-north {
+}
+.ui-layout-pane-south {
+	border-top: 0;
+}
+.ui-layout-resizer-south {
+}/*	 *	add borders to resizers when pane is 'closed'	 *	 *.ui-layout-resizer-closed	{ border:			1px solid #BBB; }	 */	/*	 *	show both borders when the resizer is 'dragging'	 */
+.ui-layout-resizer-west-dragging, .ui-layout-resizer-east-dragging {
+}
+.ui-layout-resizer-north-dragging, .ui-layout-resizer-south-dragging {
+}	
