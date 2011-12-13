@@ -20,10 +20,6 @@ Deck = function(id, index) {
 
 	this.gainNode = context.createGainNode();
 	this.gainNode.gain.value = 1;
-    
-    this.convolver = context.createConvolver();
-    this.convolverWet = context.createGainNode();
-    this.convolverWet.gain.value = 0.0;
 
 	this.lowFilter = context.createLowPass2Filter();
 	this.lowFilter.cutoff.value = context.sampleRate * 0.5;
@@ -34,12 +30,8 @@ Deck = function(id, index) {
 	this.highFilter.resonance.value = 5.0;
 
 	this.xFaderGain = context.createGainNode();
-
-    this.gainNode.connect(this.convolver);
 	this.gainNode.connect(this.lowFilter);
-    this.convolver.connect(this.convolverWet);
-    this.convolverWet.connect(this.lowFilter);
-    
+   
 	this.lowFilter.connect(this.highFilter);
 	this.highFilter.connect(this.xFaderGain);
 	this.xFaderGain.connect(context.destination);

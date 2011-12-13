@@ -103,6 +103,24 @@
 		initMidi();
 		waveformView = new WaveformView();
 
+		//setup panels
+		$('body').layout({
+			center__paneSelector : ".mainPanel",
+			south__paneSelector : ".tracksPanel",
+			south__size : 250
+		});
+
+		$('div.tracksPanel').layout({
+			north__paneSelector : ".searchPanel",
+			west__paneSelector : ".tagResultPanel",
+			center__paneSelector : ".artistResultPanel",
+			east__paneSelector : ".trackResultPanel",
+			north__size : 50,
+			west__size : 150,
+			center__size : 250,
+			east__size : 900
+		});
+
 		//setup events
 		$(window).resize(function() {
 			resizeUI();

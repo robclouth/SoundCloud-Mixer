@@ -7,41 +7,19 @@
 		<link rel="stylesheet" href="./css/layout-default-latest.css" type="text/css"/>
 		<link rel="stylesheet" href="./css/smoothness/jquery-ui-1.8.16.custom.css" type="text/css"/>
 		<link rel="stylesheet" href="./css/mixer.css" type="text/css"/>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="js/jquery.layout-latest.js"></script>
-		<script type="text/javascript" src="js/jquery.xdomainajax.js"></script>
-		<script type="text/javascript" src="js/processing-1.2.3.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.layout-latest.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.xdomainajax.js"></script>
+		<script type="text/javascript" src="js/libs/processing-1.2.3.min.js"></script>
 		<script type="text/javascript" src="js/global.js"></script>
 		<script type="text/javascript" charset="utf-8" src="./js/mixer.js"></script>
-		<script type='text/javascript' src="js/beatdetektor.js" ></script>
-		<script type='text/javascript' src="js/dsp.js" ></script>
+		<script type='text/javascript' src="js/libs/beatdetektor.js" ></script>
+		<script type='text/javascript' src="js/libs/dsp.js" ></script>
 		<script type='text/javascript' src="js/soundcloudhandler.js" ></script>
 		<script type='text/javascript' src="js/deck.js" ></script>
 		<script type='text/javascript' src="js/waveform.js" ></script>
-		<script type="text/javascript" src="js/midibridge-0.5.min.js"></script>
-		<script type="text/javascript" >
-			$(document).ready(function() {
-				//setup panels
-				$('body').layout({
-					center__paneSelector : ".mainPanel",
-					south__paneSelector : ".tracksPanel",
-					south__size : 250
-				});
-
-				$('div.tracksPanel').layout({
-					north__paneSelector : ".searchPanel",
-					west__paneSelector : ".tagResultPanel",
-					center__paneSelector : ".artistResultPanel",
-					east__paneSelector : ".trackResultPanel",
-					north__size : 50,
-					west__size : 150,
-					center__size : 250,
-					east__size : 900
-				});
-			});
-
-		</script>
+		<script type="text/javascript" src="js/libs/midibridge-0.5.min.js"></script>
 	</head>
 	<body>
 		<div class="mainPanel">
