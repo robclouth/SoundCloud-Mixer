@@ -168,7 +168,7 @@ var serveIndex = function (response) {
 
 var router = bee.route({
 
-  'r`^/public/(.*)`': bee.staticDir('./public/', {
+  'r`^/(.*)`': bee.staticDir('./public/', {
     '.html': 'text/html',
     '.css': 'text/css',
     '.gif': 'image/gif',
@@ -183,7 +183,6 @@ var router = bee.route({
 
   'r`^/([\\w-_]+)/([\\w-_]+)/audio`': function (req, response, matches) {
     var resource = matches.join('/');
-
     return scResolve(resource, response, makeRequest, getChunks, requestTrack, makeRequest, writeResponse);
   },
 
@@ -201,4 +200,5 @@ var router = bee.route({
 });
 
 http.createServer(router).listen(process.env.PORT || 8181);
+
 

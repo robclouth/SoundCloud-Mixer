@@ -67,19 +67,13 @@ Deck.prototype.triggerLoad = function(trackData) {
 	this.baseTempo = this.currentTrackData.bpm;
 	this.setTempo(this.currentTrackData.bpm);
 
-	var self = this;
-	scHandler.getMediaLink(trackData, function(url) {
-		self.load(url)
-	});
+	this.load(trackData)
 
 	this.updateUI();
 }
 
-Deck.prototype.load = function(url) {
-	this.url = url;
+Deck.prototype.load = function(trackData) {
 	var self = this;
-
-	var proxyUrl = "./php/proxy.php?url=" + url + "&mode=native";
 
 	this.deckStatusElem.text('Loading track...');
 
@@ -90,7 +84,7 @@ Deck.prototype.load = function(url) {
 
 	// Load asynchronously
 	var request = new XMLHttpRequest();
-	request.open("GET", proxyUrl, true);
+	request.open("GET", "/{0}/{1}/audio".format(trackData.user.permalink, trackData.permalink), true);
 	request.responseType = "arraybuffer";
 
 	this.request && this.request.abort();

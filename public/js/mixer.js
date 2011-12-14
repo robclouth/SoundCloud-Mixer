@@ -53,27 +53,6 @@
 
 		deck1.otherDeck = deck2;
 		deck2.otherDeck = deck1;
-
-		var request = new XMLHttpRequest();
-		request.open("GET", "impulse/waldsassennarrow.wav", true);
-		request.responseType = "arraybuffer";
-
-		var self = this;
-		request.onload = function() {
-			if(request.readyState != 4)
-				return;
-
-			context.decodeAudioData(request.response, function(buffer) {
-				deck1.convolver.buffer = buffer;
-				deck2.convolver.buffer = buffer;
-			});
-		}
-
-		request.onerror = function() {
-			alert("error.");
-		}
-
-		request.send();
 	}
 
 	function setCrossFader(val) {
@@ -100,7 +79,7 @@
 		scHandler = new SoundCloudHandler();
 
 		initAudio();
-		initMidi();
+		//initMidi();
 		waveformView = new WaveformView();
 
 		//setup panels
